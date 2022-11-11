@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+:root{
+
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-family: 'Rubik', sans-serif;
+}
+
+
+.attribution{
+    display: none;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow:hidden ;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    width: 725px;
+    margin: 0 auto;
+    gap: 8rem;
+    z-index: 1;
+}
+
+
+main::before{
+    position: absolute;
+    bottom: 15%;
+    left: -5.3%;
+    content: "";
+    width:500px;
+    height: 115%;
+    flex: none;
+    border-radius: 20rem;
+    background: linear-gradient(to bottom left,hsl(293, 100%, 63%),hsl(264, 100%, 61%));
+}
+
+main::after{
+    position: absolute;
+    top: 15%;
+    right: -12.3%;
+    content: " ";
+    width: 500px;
+    height: 115%;
+    flex: none;
+    border-radius: 30rem;
+    background: linear-gradient(to bottom left,hsl(293, 100%, 63%),hsl(264, 100%, 61%));
+    opacity: .03;
+    z-index: 0;
+}
+
+
+.mobile{
+    width: 250px;
+    height: 500px;
+    background-color: hsl(0, 0%, 100%);
+    padding: 10px;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 0 50px rgba(0, 0, 0, .2);
+    overflow: hidden;
+}
+
+.menu-header{
+    width: 100%;
+    height: 10px;
+    flex: none;
+}
+
+.mobile>header::after{
+    content: "";
+    width: 60%;
+    height: 35px;
+    background: white;
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    border-radius: 5rem;
+    transform: translateX(-50%);
+
+}
+main>section:nth-child(1){
+    width: fit-content;
+    flex: none;
+}
+
+main>section:nth-child(2){
+    width: 450px;
+    flex: none;
+}
+
+.mobile>header{
+    height: 65px;
+    background: linear-gradient(to left, hsl(293, 100%, 63%),hsl(264, 100%, 61%));
+    display: flex;
+    flex-direction: column;
+    color: hsl(0, 0%, 100%);
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    padding: 10px 15px;
+    gap: 10px;
+    /*gap: 10px;
+    font-size: .5rem;
+    flex-wrap: wrap; */
+}
+
+.menu-content>.profile-image{
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menu-content{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    align-items: center;
+    gap: 5px;
+}
+
+.menu-content>div:first-of-type{
+    font-size: .8rem;
+}
+.menu-content>div:last-of-type{
+    font-size: .8rem;
+}
+.menu-content>.profile-image>img{
+    width: 25px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.menu-content>.header-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.menu-content>.header-content>h2{
+    color: hsl(0, 0%, 100%);
+    font-size: .7rem;
+    font-weight: 400;
+}
+.menu-content>.header-content>small{
+    color: hsl(276, 100%, 81%);
+    font-size: .5rem;
+}
+
+.mobile>.message-list{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: hsl(270, 20%, 96%);
+    padding: 10px;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+
+.mobile>.message-list>.chat{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    height: 100%;
+}
+.mobile>.message-list>.chat>div{
+    max-width: 60%;
+    background-color:hsl(0, 0%, 100%);
+    border-radius: .5rem ;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .075);
+    align-self: flex-end;
+    color: hsl(271, 15%, 43%);
+    padding: .25rem .5rem;
+    position: relative;
+    font-size: .5rem;
+    line-height: .75rem ;
+    /* right: -100%; */
+}
+
+.mobile>.message-list>.chat>div:nth-child(5){
+    margin-bottom: 10px;
+}
+
+.mobile>.message-list>.chat>div::after{
+    content: " ";
+    width: .5rem;
+    height: .5rem;
+    background-color:hsl(0, 0%, 100%);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-bottom-right-radius: .2rem;
+}
+.mobile>.message-list>.chat>div.recieved::after{
+    content: " ";
+    width: .5rem;
+    height: .5rem;
+    background-color:#ede5f4;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom-right-radius: .2rem;
+}
+
+.mobile>.message-list>.chat>div.recieved{
+    color: hsl(276, 55%, 52%) ;
+    align-self: flex-start;
+    background-color: #ede5f4;
+    box-shadow: none;
+    /* left: -100%; */
+}
+
+.mobile>.message-list>.chat>div.images{
+    margin-top: 10px;
+    display: flex;
+    max-width: 65%;
+    gap: 10px;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+}
+
+.mobile>.message-list>.chat>div.images>img{
+    width: 100%;
+    border-radius: .5rem;
+}
+
+.mobile>.message-list>.chat>div.offers{
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    box-shadow: none;
+    width: 80%;
+    max-width: 80%;
+    align-self: flex-start;
+    padding: 0;
+    gap: .5rem;
+}
+
+.mobile>.message-list>.chat>div.offers::after{
+    content: none;
+}
+
+.mobile>.message-list>.chat>div.images::after{
+    content: none;
+}
+
+.mobile>.message-list>.chat>div.offers>div{
+    display: flex;
+    padding: .7rem .5rem;
+    background:linear-gradient(to left,hsl(264, 100%, 61%),hsl(293, 100%, 63%));
+    color:  hsl(0, 0%, 100%) ;
+    border-radius: .5rem;
+    position: relative;
+    align-items: center;
+    gap: 10px;
+    font-size: .85rem;
+}
+
+.mobile>.message-list>.chat>div.offers>div::after{
+    content: " ";
+    width: .5rem;
+    height: .5rem;
+    position: absolute;
+    background-color: hsl(293, 100%, 63%);
+    bottom: 0;
+    left: 0;
+    border-bottom-left-radius: .2rem;
+}
+
+.mobile>.message-list>.chat>div.offers>div>input[type="checkbox"]{
+    display: none
+}
+
+.mobile>.message-list>.chat>div.offers>div>label{
+    width: .75rem;
+    height: .75rem;
+    border: 1.5px solid hsl(289, 100%, 72%);
+    border-radius: 50%;
+    flex: none;
+    background: rgba(0, 0, 0, 0);
+}
+
+.mobile>.message-list>.chat>div.offers>div>input:checked+label{
+    background-color: white ;
+}
+
+
+.mobile>.message-list>.chat>div.offers>div>span:first-of-type{
+    width: 100%;
+    font-size: .45rem;
+    font-weight: 400;
+}
+
+.mobile>.message-list>.chat>div.offers>div>span:last-child{
+    font-weight: bold;
+    font-size: .75rem;
+    margin-right: .5rem;
+}
+
+.mobile>.message-list>form{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    height: 35px;
+    border-radius: 2rem;
+    align-items: center;
+}
+
+.mobile>.message-list>form>input{
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    margin-left: 20px;
+    color: hsl(206, 6%, 79%);
+    font-size: .6rem;
+}
+
+.mobile>.message-list>form>button{
+    background-color: hsl(271, 36%, 24%) ;
+    color: white;
+    width: 25px;
+    height: 25px;
+    border: none;
+    border-radius: 50%;
+    flex: none;
+    font-weight: bold;
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+
+section:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+section:nth-child(2)>.content{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+section:nth-child(2)>.content>h1{
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: hsl(271, 36%, 24%);
+}
+
+section:nth-child(2)>.content>p{
+    font-size: 1rem;
+    font-weight: 400;
+    color: hsl(270, 7%, 64%);
+    line-height: 1.5rem;
+}
+
+
+@media screen and (max-width:1000px) {
+    main{
+        width: 100%;
+        gap: 50px;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 35px;
+        position: relative;
+    }
+    main::before{
+        width: 100%;
+        bottom: 50%;
+        left: -50%;
+        z-index: -1;
+        height: 115vh;
+        /* width: 250px; */
+    }
+
+    main::after{
+        width: 100%;
+        top: 50%;
+        right: -50%;
+        z-index: -1;
+        height: 115vh;
+        /* width: 250px; */
+    }
+
+    /* body::before{
+        width: 500px;
+        height: 115%;
+        bottom: 15%;
+        left: ;
+    }
+
+    body::after{
+        width: 500px;
+        height: 115%;
+        right:-50%;
+        top: 50%;
+    } */
+
+    main>section:nth-child(2){
+        text-align: center;
+        width: 100%;
+    }
+    section:last-of-type>.content>h1{
+        font-size: 2.5rem;
+    }
+    section:last-of-type>.content>p{
+        /* font-size: 1.1rem; */
+        line-height: 1.75rem;
+    }
+}
